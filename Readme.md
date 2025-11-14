@@ -1,5 +1,6 @@
 ![Tracee Logo](docs/images/tracee.png)
 
+[![Build](https://github.com/GizzZmo/tracee/actions/workflows/build.yaml/badge.svg)](https://github.com/GizzZmo/tracee/actions/workflows/build.yaml)
 [![CI](https://github.com/GizzZmo/tracee/actions/workflows/ci.yaml/badge.svg)](https://github.com/GizzZmo/tracee/actions/workflows/ci.yaml)
 [![PR](https://github.com/GizzZmo/tracee/actions/workflows/pr.yaml/badge.svg)](https://github.com/GizzZmo/tracee/actions/workflows/pr.yaml)
 [![CodeQL](https://github.com/GizzZmo/tracee/actions/workflows/codeql.yaml/badge.svg)](https://github.com/GizzZmo/tracee/actions/workflows/codeql.yaml)
