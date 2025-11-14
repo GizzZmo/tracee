@@ -1,5 +1,12 @@
 ![Tracee Logo](docs/images/tracee.png)
 
+[![CI](https://github.com/GizzZmo/tracee/actions/workflows/ci.yaml/badge.svg)](https://github.com/GizzZmo/tracee/actions/workflows/ci.yaml)
+[![PR](https://github.com/GizzZmo/tracee/actions/workflows/pr.yaml/badge.svg)](https://github.com/GizzZmo/tracee/actions/workflows/pr.yaml)
+[![CodeQL](https://github.com/GizzZmo/tracee/actions/workflows/codeql.yaml/badge.svg)](https://github.com/GizzZmo/tracee/actions/workflows/codeql.yaml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/GizzZmo/tracee)](https://goreportcard.com/report/github.com/GizzZmo/tracee)
+[![License](https://img.shields.io/github/license/GizzZmo/tracee)](https://github.com/GizzZmo/tracee/blob/main/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/GizzZmo/tracee.svg)](https://github.com/GizzZmo/tracee/releases)
+
 <!-- links that differ between docs and readme -->
 [installation]:https://aquasecurity.github.io/tracee/latest/docs/install/
 [docker-guide]:https://aquasecurity.github.io/tracee/latest/docs/install/docker/
