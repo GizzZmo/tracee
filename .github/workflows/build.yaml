@@ -1,0 +1,54 @@
+#
+# Build Workflow - Simple build verification
+#
+name: Build
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - "main"
+      - "release-v*.*.*"
+      - "copilot/**"
+  pull_request:
+    branches:
+      - "main"
+      - "release-v*.*.*"
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    container:
+      image: alpine/git:2.49.1@sha256:bd54f921f6d803dfa3a4fe14b7defe36df1b71349a3e416547e333aa960f86e3
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          submodules: true
+      
+      - name: Fix Git ownership
+        run: git config --global --add safe.directory $GITHUB_WORKSPACE
+        shell: sh
+      
+      - name: Install Dependencies
+        run: ./scripts/installation/install-deps-alpine.sh
+        shell: sh
+      
+      - name: Build Tracee
+        run: |
+          make clean
+          make tracee
+        shell: sh
+      
+      - name: Verify Build
+        run: |
+          if [ -f "./dist/tracee" ]; then
+            echo "✅ Tracee binary built successfully"
+            ls -lh ./dist/tracee
+          else
+            echo "❌ Tracee binary not found"
+            exit 1
+          fi
+        shell: sh
